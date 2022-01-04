@@ -1,0 +1,452 @@
+html{
+  scroll-behavior: smooth;
+}
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+
+.block{
+  display: inline-block;
+}
+
+/* product*/
+.product{
+  background: #000;
+  position: relative;
+}
+
+.product .product_name{
+  width: 55%;
+  margin: 0 auto;
+  font-size: var(--font_prd_title);
+  font-family:"Linotype Didot";
+  line-height: 1.2;
+  text-align: center;
+  color: #cfb881;
+  margin-bottom: 4vw;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+}
+.product .product_top{
+  position: relative;
+  margin-bottom: 3vw;
+  z-index: 1;
+}
+.product .product_img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.product .product_top .main_img{
+  position: relative;
+}
+.product .product_top .main_img .bottle_img{
+  /* width: 130px; */
+  /* width: 13vw; */
+  width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+/* bottom, right 값 수정하기 */
+.product_top .main_img span{
+  width: 210px;
+  position: absolute;
+  bottom: 50px;
+  right: -190px;
+  /* left: 0; */
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: var(--font_p);
+  padding: 8px 20px 8px 28px;
+  font-family: "akkurat"!important;
+  text-align: left;
+  line-height: 1.3;
+  z-index: 1;
+  color: rgba(255,255,255,0.5);
+}
+
+.product_bottom{
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.product_bottom .product_txt{
+  padding: 0 70px;
+  margin-top: 30px;
+}
+.product_bottom .txt_wrap .product_desc{
+  font-size: var(--font_p);
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: center;
+  word-break:break-word;
+}
+.product_bottom .txt_wrap p{
+  font-size: var(--font_small);
+  line-height: 1.8;
+  position: relative;
+  z-index: 99;  
+  word-break:keep-all;
+  word-wrap: break-word;
+}
+.product_bottom .view_click{
+  width: 100%;
+  display: block;
+  font-size: var(--font_p);
+  color: #a9956d;
+  font-family: "akkurat"!important;
+  background: inherit;
+  z-index: 99;
+  margin-top: 40px;
+}
+.product_info{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left :50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  background: linear-gradient(
+0deg,rgba(0,21,27,0) 0%,rgba(0,21,27,0) 70%,rgba(0,0,0,0) 100%);
+padding-bottom: 50px;
+}
+.product_info .hidden_info .inner>p{
+  padding-bottom: 40px;
+  color: #fff;
+  font-size: var(--font_small);
+  line-height: 1.8;
+  word-break:keep-all;
+  word-wrap: break-word;
+}
+/* hidden_info 에 max-height주기 */
+.hidden_info{
+  max-width: 750px;
+  max-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+  z-index: 90;
+}
+
+.hidden_info .inner{
+  padding: 0 30px;
+  text-align: center;
+  position: relative;
+}
+
+.hidden_info .fragrance_notes{
+  width: 100%;
+  background: #fff;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  color: #000;
+}
+.fragrance_notes .ingredients_wrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.hidden_info .fragrance_notes h4{
+  /* font-size: 18px; */
+  font-size: var(--font_p);
+  padding: 24px 0;
+}
+.hidden_info .fragrance_notes .img_wrap{
+  width: 150px;
+  margin: 0 auto;
+}
+.hidden_info .fragrance_notes .img_wrap img{
+  width: 100%;
+}
+.hidden_info .ingredients_wrap .ingredient_name{
+  margin-bottom: 10px;
+  font-size: var(--font_small);
+}
+.hidden_info_bottom{
+  font-family: "akkurat"!important;
+}
+.hidden_info_bottom .product_details{
+  display: flex;
+  justify-content: center;
+  font-size: var(--font_small);
+  padding-top: 50px;
+}
+.hidden_info_bottom .product_details span{
+  padding: 5px 30px;
+}
+.hidden_info_bottom .product_details span:first-child{
+  border-right: 1px solid #a9956d;
+}
+.hidden_info_bottom .add_to_bag{
+  width: 300px;
+  display: block;
+  text-align: center;
+  /* padding: 20px 0; */
+  margin: 30px auto;
+  border: 2px solid #fff;
+  background: inherit;
+  line-height: 3;
+  /* font-size: 18px; */
+  font-size: var(--font_h3);
+  color: #fff;
+  transition: .8s;
+}
+.hidden_info_bottom .add_to_bag:hover{
+  background: #a9956d;
+  color: #000;
+  border-color: #a9956d;
+}
+.product_info .view_less{
+  width: 100%;
+  padding-bottom: 150px;
+  display: block;
+  text-align: center;
+  font-size: var(--font_h3);
+  /* font-size: 16px; */
+  font-family: "akkurat"!important;
+  color: #a9956d;
+  visibility: hidden;
+  background: transparent;
+}
+
+/* quote */
+.quote{
+  position: relative;
+  padding: 300px 0 50px;
+}
+.quote .inner{
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.quote .txt_wrap p{
+  max-width: 1000px;
+  font-size: var(--font_quote);
+  color: #a9956d;
+  line-height: 1.4;
+  z-index: 1;
+  margin: 0 auto;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+.quote .txt_wrap p i{
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(../images/quote_icon.png) no-repeat;
+  background-size: contain;
+}
+.quote .txt_wrap p .block i{
+  transform: rotate(180deg);
+  margin-left: 8px;
+}
+.quote .txt_wrap strong{
+  font-size: var(--font_p);
+  line-height: 1.4;
+  padding: 50px 0;
+  display: block;
+}
+.quote .txt_wrap a.about{
+  display: inline-block;
+  font-size: var(--font_h3);
+  line-height: 3;
+  padding: 10px 50px;
+  color: #a9956d;
+  border: 1px solid #a9956d;
+  font-family: "akkurat"!important;
+  transition: .8s;
+}
+.quote .txt_wrap a.about:hover{
+  background: #a9956d;
+  color: #000;
+}
+/* click function add visibility */
+.view_click.hidden{
+  display: none;
+}
+.view_less.visible{
+  visibility: visible;
+}
+.hidden_info .inner.visible{
+  visibility: visible;
+  z-index: 99;
+}
+.hidden_info.give_height{
+  max-height :55vw;
+  visibility: visible;
+  z-index: 99;
+}
+.product .product_info.add_bg{
+  z-index: 99;
+background: rgb(0,0,0);
+background: -moz-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.23853291316526615) 5%, rgba(0,0,0,0.8631827731092436) 17%, rgba(0,0,0,0.938813025210084) 28%, rgba(0,0,0,0.9780287114845938) 54%, rgba(0,0,0,0.6979166666666667) 85%, rgba(0,0,0,0.16010154061624648) 97%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.23853291316526615) 5%, rgba(0,0,0,0.8631827731092436) 17%, rgba(0,0,0,0.938813025210084) 28%, rgba(0,0,0,0.9780287114845938) 54%, rgba(0,0,0,0.6979166666666667) 85%, rgba(0,0,0,0.16010154061624648) 97%, rgba(0,0,0,0) 100%);
+background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.23853291316526615) 5%, rgba(0,0,0,0.8631827731092436) 17%, rgba(0,0,0,0.938813025210084) 28%, rgba(0,0,0,0.9780287114845938) 54%, rgba(0,0,0,0.6979166666666667) 85%, rgba(0,0,0,0.16010154061624648) 97%, rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+
+:root{
+  --font_h2:60px;
+  --font_h3:30px;
+  --font_h4:20px;
+  --font_prd_title:70px;
+  --font_quote: 50px;
+  --font_banner: 16px;
+  --font_footer: 14px;
+  --font_p: 28px;
+  --font_small: 24px;
+  --font_footer_util: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  :root{
+    --font_h2:5.8vw;
+    --font_h3:3vw;
+    --font_h4:2vw;
+    --font_prd_title:7.8vw;
+    --font_quote: 5.3vw;
+    --font_banner: 1.5vw;
+    --font_footer: 1.3vw;
+    --font_p: 3.1vw;
+    --font_small: 2.3vw;
+    --font_footer_util: 1.1vw;
+  }
+
+  .product .product_top .main_img .bottle_img{
+    width: 23vw;
+  }
+  .product .product_name{
+    width: 90%;
+  }
+  .product_top .main_img span{
+    width: 20.5vw;
+    bottom: 4.8vw;
+    right: -18.5vw;
+    padding: 0.7vw 1.9vw 0.7vw 2.7vw;
+  }
+  .product_bottom .view_click{
+    margin-top: 4vw;
+  }
+  .product_bottom{
+    max-width: 73.2vw;
+  }
+
+  .product_bottom .product_txt{
+    padding: 0 6.8vw;
+  }
+  .hidden_info{
+    max-width: 73.2vw;
+  }
+  .product_info .hidden_info .inner>p{
+    padding-bottom :4vw;
+  }
+  .hidden_info .fragrance_notes .img_wrap{
+    width: 14.6vw;
+  }
+  .hidden_info_bottom .product_details{
+    padding-top: 4.8vw;
+  }
+  .hidden_info_bottom .product_details span{
+    padding: 0.4vw 2.9vw;
+  }
+  .hidden_info_bottom .add_to_bag{
+    width: 29.2vw;
+    margin: 2.9vw auto;
+  }
+  .product_info .view_less{
+    padding-bottom: 1.4vw;
+  }
+
+  .quote{
+    padding: 29.2vw 0 4.8vw;
+  }
+  .quote .inner{
+    text-align: left;
+    padding-left: 4.8vw;
+  }
+  .quote .txt_wrap p{
+    max-width: 75vw;
+    margin: 0;
+    text-align: left;
+  }
+  .quote .txt_wrap p i{
+    width: 2.9vw;
+    height: 2.9vw;
+    margin-right: 0.7vw;
+  }
+  .quote .txt_wrap p .block i{
+    margin-left: 0.7vw;
+  }
+  .quote .txt_wrap strong{
+    padding: 4.8vw 0;
+  }
+  .product .product_info.add_bg{
+    background: linear-gradient(0deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0) 5%, rgba(0,0,0,0.8631827731092436) 17%, rgba(0,0,0,0.938813025210084) 28%, rgba(0,0,0,0.9780287114845938) 54%, rgb(0 0 0 / 0%) 85%, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 0%) 0%);
+  }
+}
+@media screen and (max-width: 768px) {
+  :root{
+    --font_h2:30px;
+    --font_h3:15px;
+    --font_h4:10px;
+    --font_prd_title:36px;
+    --font_banner: 14px;
+    --font_footer: 14px;
+    --font_p: 18px;
+    --font_small: 15px;
+    --font_footer_util: 14px;
+  }
+  .product .product_top .main_img .bottle_img{
+    width: 130px;
+  }
+  .product .product_name{
+    width: 300px;
+  }
+  .product_top .main_img span{
+    width: 90px;
+    bottom: 20px;
+    right: -84px;
+    font-size: 12px;
+  }
+  .product_bottom{
+    max-width: 600px;
+  }
+  .product_bottom .product_txt{
+    padding: 0 30px;
+  }
+  .hidden_info{
+    max-width: 600px;
+    /* padding: 0 30px; */
+  }
+  .hidden_info .fragrance_notes .img_wrap{
+    width: 150px;
+  }
+  .hidden_info.give_height{
+    max-height :900px;
+    visibility: visible;
+    z-index: 99;
+  }
+  .fragrance_notes .ingredients_wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .hidden_info_bottom .add_to_bag{
+    width: 200px;
+  }
+}

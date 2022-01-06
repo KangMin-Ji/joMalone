@@ -56,22 +56,6 @@ html{
   position: relative;
   z-index: 2;
 }
-/* bottom, right 값 수정하기 */
-.product_top .main_img span{
-  width: 210px;
-  position: absolute;
-  bottom: 50px;
-  right: -190px;
-  /* left: 0; */
-  border: 1px solid rgba(255,255,255,0.5);
-  font-size: var(--font_p);
-  padding: 8px 20px 8px 28px;
-  font-family: "akkurat"!important;
-  text-align: left;
-  line-height: 1.3;
-  z-index: 1;
-  color: rgba(255,255,255,0.5);
-}
 
 .product_bottom{
   max-width: 750px;
@@ -223,7 +207,7 @@ padding-bottom: 50px;
 /* quote */
 .quote{
   position: relative;
-  padding: 300px 0 50px;
+  /* padding: 300px 0 50px; */
 }
 .quote .inner{
   text-align: center;
@@ -332,12 +316,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
   .product .product_name{
     width: 90%;
   }
-  .product_top .main_img span{
-    width: 20.5vw;
-    bottom: 4.8vw;
-    right: -18.5vw;
-    padding: 0.7vw 1.9vw 0.7vw 2.7vw;
-  }
   .product_bottom .view_click{
     margin-top: 4vw;
   }
@@ -370,10 +348,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
   .product_info .view_less{
     padding-bottom: 1.4vw;
   }
-
+/* 
   .quote{
     padding: 29.2vw 0 4.8vw;
-  }
+  } */
   .quote .inner{
     text-align: left;
     padding-left: 4.8vw;
@@ -415,12 +393,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
   }
   .product .product_name{
     width: 300px;
-  }
-  .product_top .main_img span{
-    width: 90px;
-    bottom: 20px;
-    right: -84px;
-    font-size: 12px;
   }
   .product_bottom{
     max-width: 600px;

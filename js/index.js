@@ -11,7 +11,6 @@ $(function () {
 
   });
 
-
   $(window).scroll(function () {
     curr = $(this).scrollTop();
     h = $('.in_gnb').outerHeight();
@@ -22,31 +21,24 @@ $(function () {
       $('header').removeClass('on');
     }
   });
-
   let count = false;
   $('.ham_btn').click(function (e) {
     e.preventDefault();
-    
-    $('.header_inner .ham_btn .line_second').removeClass('on');
-    $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').removeClass('rotate');
-          $('header .gnb_area').css({
-        visibility: 'visible'
-      });
-    // if (count === true) {
-    //   $('header .gnb_area').css({
-    //     visibility: 'hidden'
-    //   });
-    //   $('.header_inner .ham_btn .line_second').removeClass('on');
-    //   $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').removeClass('rotate');
-    //   count = false;
-    // } else {
-    //   $('header .gnb_area').css({
-    //     visibility: 'visible'
-    //   });
-    //   $('.header_inner .ham_btn .line_second').addClass('on');
-    //   $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').addClass('rotate');
-    //   count = true;
-    // }
+    if (count === true) {
+      $('header .gnb_area').css({visibility: 'hidden'});
+      $('.header_inner .ham_btn .line_second').removeClass('on');
+      $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').removeClass('rotate');
+      $('body').removeClass('overflow');
+      $('header').removeClass('overflow');
+      count = false;
+    } else {
+      $('header .gnb_area').css({ visibility: 'visible'});
+      $('.header_inner .ham_btn .line_second').addClass('on');
+      $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').addClass('rotate');
+      $('body').addClass('overflow');
+      $('header').addClass('overflow');
+      count = true;
+    }
   });
 
   $('.menu_open').click(function () {
@@ -68,7 +60,6 @@ $(function () {
       });
     }
   });
-
 
   $('.view_click').each(function () {
     const proInfo = $(this).parents('.product_bottom').siblings('.product_info');
@@ -94,14 +85,10 @@ $(function () {
   });
 
 
-
-
-
   //==========================gsap===============================//
-
   $(window).scroll(function () {
     curr = $(window).scrollTop();
-    if (curr > 0) {
+    if (curr > 100) {
       $('.scroll').addClass('hide');
       $('.intro_bottom .txt_wrap p').addClass('show');
     }
@@ -109,26 +96,26 @@ $(function () {
 
   gsap.from('.yellow_flower_stem_wrap', {
     rotate: 20,
-    duration: 3,
+    duration: 1.5,
     scale: (1.5),
   });
   gsap.from('.white_purple_flower_stem', {
-    duration: 2.5,
+    duration: 1,
     scale: (2),
   });
   gsap.from('.vine_flower', {
     x: 50,
-    duration: 2.5,
+    duration: 1.5,
     scale: (1.5),
   });
   gsap.from('.blue_flower', {
     x: 50,
     rotate: 10,
-    duration: 2.5,
+    duration: 1.5,
     scale: (1.5),
   });
   gsap.from('.below_intro .hand_orange_flowers', {
-    duration: 2.5,
+    duration: 1.5,
     scale: (1.2),
   });
 
@@ -136,18 +123,18 @@ $(function () {
   txtMotion = gsap.timeline({});
   txtMotion.from('.intro .intro_logo', {
     opacity: 0,
-    duration: 2,
-    delay: 2,
+    duration: 1,
+    delay: 1,
     yPercent: 20,
   });
   txtMotion.from('.intro .intro_title p', {
     opacity: 0,
-    duration: 2,
+    duration: 0.8,
     yPercent: 20,
   });
   txtMotion.from('.intro .intro_title h2', {
     opacity: 0,
-    duration: 2,
+    duration: 0.8,
     yPercent: 20,
   });
   txtMotion.from('.intro_bottom .txt_wrap p', {
@@ -155,7 +142,7 @@ $(function () {
   });
   txtMotion.from('.intro .scroll', {
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
   });
 
   //product_img 
@@ -207,15 +194,6 @@ $(function () {
 
   // product_1
   const pro1 = $('.product_1');
-  gsap.from('.product_1 .main_img span', {
-    scrollTrigger: {
-      trigger: pro1,
-      start: 'top 50%',
-    },
-    opacity: 0,
-    yPercent: 30,
-    duration: 2,
-  });
   gsap.from('.product_1 .bottle_bg', {
     scrollTrigger: {
       trigger: pro1,
@@ -262,7 +240,7 @@ $(function () {
 
   //product_2
   const pro2 = $('.product_2');
-  gsap.from('.product_2 .bottle_img, .product_2 .main_img span, .product_2 .bottle_bg, .crep_tentacle_base_1, .crep_tentacle_base_2', {
+  gsap.from('.product_2 .bottle_img, .product_2 .bottle_bg, .crep_tentacle_base_1, .crep_tentacle_base_2', {
     scrollTrigger: {
       trigger: pro2,
       start: 'top 50%',
@@ -307,171 +285,6 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
     duration: d1,
   });
 });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_12', {
-  //   rotate: -12,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_11', {
-  //   rotate: -8,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_10', {
-  //   rotate: 12,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_9', {
-  //   rotate: -12,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_8', {
-  //   rotate: 10,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_7', {
-  //   rotate: -5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_6', {
-  //   rotate: -15,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.5,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_5', {
-  //   rotate: -7,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_4', {
-  //   rotate: 12,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_3', {
-  //   rotate: -10,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_2', {
-  //   rotate: 14,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.5,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_1_arm_1', {
-  //   rotate: -5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-
-  // gsap.to('.product_2 .crep_tentacle_2_arm_15', {
-  //   rotate: 5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_14', {
-  //   rotate: -5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_13', {
-  //   rotate: 8,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_12', {
-  //   rotate: 7,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_11', {
-  //   rotate: -6,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.4,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_10', {
-  //   rotate: -12,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_9', {
-  //   rotate: 4,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_8', {
-  //   rotate: -8,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_7', {
-  //   rotate: 5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_6', {
-  //   rotate: -10,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_5', {
-  //   rotate: 11,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_4', {
-  //   rotate: 5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 3,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_3', {
-  //   rotate: -5,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_2', {
-  //   rotate: 11,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2.5,
-  // });
-  // gsap.to('.product_2 .crep_tentacle_2_arm_1', {
-  //   rotate: 7,
-  //   repeat: -1,
-  //   yoyo: true,
-  //   duration: 2,
-  // });
-
-
 
   //break
   const breakArea = $('.break');
@@ -587,25 +400,6 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
     duration: 2,
     xPercent: 45,
     delay: 1.5,
-  });
-
-  //quote_second
-  //blue_flower
-  gsap.from('.quote_second .venenum_blue_flower_main', {
-    scrollTrigger: {
-      trigger: '.quote_second .venenum_blue_flower_main',
-      start: '-8% 50%',
-    },
-    rotate: 10,
-    duration: 5,
-  });
-  gsap.from('.quote_second .venenum_blue_flower_stem', {
-    scrollTrigger: {
-      trigger: '.quote_second .venenum_blue_flower_stem',
-      start: '-8% 50%',
-    },
-    rotate: 10,
-    duration: 5,
   });
 
   //product_5 

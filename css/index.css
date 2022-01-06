@@ -37,11 +37,13 @@
   width: 20px;
   height: 20px;
 }
-.bannerSwiper .banner-button-prev{
+
+.bannerSwiper .banner-button-prev {
   background: url(../images/left_arrow.png) no-repeat;
   background-size: cover;
 }
-.bannerSwiper .banner-button-next{
+
+.bannerSwiper .banner-button-next {
   background: url(../images/right_arrow.png) no-repeat;
   background-size: cover;
 }
@@ -97,8 +99,9 @@ main .container .intro {
 .intro_top .intro_logo img {
   width: 100%;
 }
-.intro_top .intro_title{
-  font-family:"Linotype Didot";
+
+.intro_top .intro_title {
+  font-family: "Linotype Didot";
 }
 
 .intro_top .intro_title p {
@@ -163,7 +166,7 @@ main .container .intro {
   margin-bottom: 30px;
   opacity: 0.1;
   /* font-family: 'Noto Sans KR', sans-serif; */
-  word-break:keep-all;
+  word-break: keep-all;
   word-wrap: break-word;
 }
 
@@ -474,7 +477,9 @@ main .container .intro {
   background-color: #211611;
   background-size: 2200px;
   background-position: bottom left;
+  padding: 300px 0 50px;
 }
+
 .quote_first .red_flower_small_wrap {
   display: none;
 }
@@ -639,23 +644,6 @@ main .container .intro {
   z-index: 9;
 }
 
-.quote_second .bottom_elements .venenum_blue_flower_main {
-  max-width: 800px;
-  position: absolute;
-  bottom: 700px;
-  right: 80px;
-  transform-origin: 60% 90%;
-}
-
-.quote_second .bottom_elements .venenum_blue_flower_stem {
-  max-width: 800px;
-  position: absolute;
-  bottom: 650px;
-  right: 100px;
-  transform-origin: 49% 103%;
-  transform: rotate(15deg);
-}
-
 .quote_second .bottom_elements .mirabilis_leaf_top {
   position: relative;
   max-width: 2000px;
@@ -818,9 +806,11 @@ main .container .intro {
   top: 0;
   right: 0;
 }
+
 .product_6 .main_img {
   position: relative;
 }
+
 .product_6 .tenebre_center_wrap {
   width: 650px;
   position: absolute;
@@ -828,18 +818,22 @@ main .container .intro {
   transform: translateX(-50%);
   top: -15%;
 }
+
 .product_6 .tenebre_center_wrap .tenebre_center_pos {
   width: 100%;
 }
+
 .product_6 .tenebre_center_wrap .tenebre_center {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .product_6_bottom {
   padding-top: 60%;
 }
+
 .product_6_bottom .product_6_bottom_left {
   max-width: 70vw;
   position: absolute;
@@ -847,6 +841,7 @@ main .container .intro {
   left: -200px;
   z-index: 1;
 }
+
 .product_6_bottom .product_6_bottom_right {
   max-width: 42vw;
   position: absolute;
@@ -854,6 +849,7 @@ main .container .intro {
   bottom: 0;
   z-index: 2;
 }
+
 .product_6_bottom .product_6_bottom_center {
   max-width: 60vw;
   position: absolute;
@@ -861,9 +857,12 @@ main .container .intro {
   bottom: 0;
 }
 
-.quote_third {
+.quote.quote_third {
   background: #000;
   padding: 200px 0;
+}
+.quote.quote_third .txt_wrap strong{
+  padding: 50px 0 0;
 }
 
 /* 768이하는 픽셀로 768이상은 vw로 가기 */
@@ -876,17 +875,6 @@ main .container .intro {
     max-width: 500px;
     right: 76vw;
     bottom: 20vw;
-  }
-
-  .quote_second .bottom_elements .venenum_blue_flower_main {
-    max-width: 700px;
-    bottom: 700px;
-  }
-
-  .quote_second .bottom_elements .venenum_blue_flower_stem {
-    max-width: 700px;
-    bottom: 650px;
-
   }
 
   .quote_second .bottom_elements .mirabilis_leaf_top {
@@ -944,7 +932,8 @@ main .container .intro {
   .product_1 .product_img .bottle_bg {
     width: 52.7vw;
   }
- .product_1 .hand_orange_flower_2 {
+
+  .product_1 .hand_orange_flower_2 {
     visibility: hidden;
   }
 
@@ -989,7 +978,9 @@ main .container .intro {
   .break .octopus_con_inner .octopus_body {
     max-width: 72vw;
   }
-
+  .quote_first{
+   padding: 29.2vw 0px 4.8vw;
+  }
   .quote_first .blackberry {
     max-width: 150px;
   }
@@ -1031,15 +1022,18 @@ main .container .intro {
     top: 15vw;
     left: 70%;
   }
-  .quote_first .red_flower_small_wrap img{
+
+  .quote_first .red_flower_small_wrap img {
     width: 100%;
   }
-  .quote_first .red_flower_small_wrap .red_flower_small_main{
-    transform-origin: 50% 70%;    
+
+  .quote_first .red_flower_small_wrap .red_flower_small_main {
+    transform-origin: 50% 70%;
     position: absolute;
     top: 0;
     left: 0;
   }
+
   .product_4 {
     padding-top: 4.8vw;
     padding-bottom: 34.1vw;
@@ -1069,17 +1063,9 @@ main .container .intro {
   .quote_second {
     padding-top: 4.8vw;
   }
-
-  .quote_second .bottom_elements .venenum_blue_flower_main {
-    max-width: 600px;
-    bottom: 500px;
-  }
-
-  .quote_second .bottom_elements .venenum_blue_flower_stem {
-    max-width: 600px;
-    bottom: 450px;
-  }
-
+.quote_second .bottom_elements {
+  padding: 200px 0;
+}
   .quote_second .bottom_elements .mirabilis_leaf_top {
     max-width: 1000px;
   }
@@ -1122,40 +1108,54 @@ main .container .intro {
   .product_6 .tenebre_center_wrap {
     width: 63.47vw;
   }
-
-  .quote_third {
-    padding: 19.5vw;
+  .quote.quote_third{
+    padding: 20vw 0;
   }
-}/*end*/
+  .quote.quote_third .txt_wrap strong{
+    padding: 4.8vw 140px 0 0;
+  }
+  /* .quote_third {
+    padding: 19.5vw;
+  } */
+}
+
+/*end*/
 
 @media screen and (max-width: 768px) {
   .intro .inner .intro_top {
     padding: 200px 0;
   }
-  .intro_top .intro_logo{
+
+  .intro_top .intro_logo {
     width: 80px;
   }
+
   .intro .yellow_flower_stem_wrap {
     max-width: 300px;
     left: -190px;
     top: -60px;
   }
+
   .intro .white_purple_flower_stem {
     max-width: 110px;
     top: -70px;
   }
+
   .intro .blue_flower {
     display: none;
   }
+
   .intro .vine_flower {
     max-width: 200px;
     left: -20px;
     top: 200px;
   }
+
   .below_intro .hand_orange_flowers {
     max-width: 300px;
     margin-right: -100px;
   }
+
   .below_intro .yellow_flower_con {
     max-width: 250px;
     left: -100px;
@@ -1165,103 +1165,109 @@ main .container .intro {
   .product_1 {
     padding-bottom: 200px;
   }
+
   .product_1 .product_img .bottle_bg {
     width: 250px;
   }
+
   .product_1 .obscuratio_tentacle {
     display: none;
   }
+
   /* product_2 */
   .product_2 {
     padding-bottom: 150px;
   }
-    .product_2 .crep_bg {
-      width: 300px;
-      bottom: -10px;
-    }
 
-    .product_2 .crep_coral {
-      max-width: 112px;
-      top: 20px;
-      right: -55px;
-    }
-    .product_2 .crep_tentacle_1 {
-      width: 118px;
-      left: -70px;
-      bottom: 16px;
-    }
-    .product_2 .crep_tentacle_2 {
-      width: 220px;
-      left: -104px;
-      top: 10px;
-    }
+  .product_2 .crep_bg {
+    width: 300px;
+    bottom: -10px;
+  }
+
+  .product_2 .crep_coral {
+    max-width: 112px;
+    top: 20px;
+    right: -55px;
+  }
+
+  .product_2 .crep_tentacle_1 {
+    width: 118px;
+    left: -70px;
+    bottom: 16px;
+  }
+
+  .product_2 .crep_tentacle_2 {
+    width: 220px;
+    left: -104px;
+    top: 10px;
+  }
+
   .product_2 .octopus_left {
     display: none;
   }
+
   .product_2 .octopus_right {
     display: none;
   }
-  .break .elements .crep_front, .break .elements .crep_back{
+
+  .break .elements .crep_front,
+  .break .elements .crep_back {
     width: 800px;
   }
-  .break .elements .crep_middle{
-    width: 800px; 
+
+  .break .elements .crep_middle {
+    width: 800px;
   }
+
   .break .octopus_con {
     max-width: 445px;
   }
+
   .break .octopus_con_inner .octopus_body {
     max-width: 445px;
   }
+
   .product_3 .arcana_butterfly {
     width: 125px;
     /* left: 100px; */
   }
+
   .product_3 .arcana_butterfly .butterfly_wing {
-    transform-origin: 4.8px 8px;  
+    transform-origin: 4.8px 8px;
     transform-origin: 123px 103px;
   }
+
   .quote_first .red_flower_small_wrap {
     max-width: 250px;
   }
-  .product_4 .top_element .snake_1{
+
+  .product_4 .top_element .snake_1 {
     width: 90vw;
   }
-  .product_4 .top_element .snake_2{
+
+  .product_4 .top_element .snake_2 {
     width: 95vw;
     left: 50%;
   }
+
   .product_4 .product_top .venenum_bg_left {
     width: 150px;
     left: -20px;
     bottom: 35px;
   }
+
   .product_4 .product_top .venenum_bg_right {
     width: 150px;
     right: -20px;
     bottom: 32px;
   }
-  .product_4 .venenum_blue_flower{
+
+  .product_4 .venenum_blue_flower {
     display: none;
   }
-  .quote_second{
-    padding-top: 50px;
-  }
-  .quote_second .bottom_elements{
-    padding-top: 350px;
-    padding-bottom: 100px;
-  }
-  .quote_second .bottom_elements .venenum_blue_flower_main {
-    max-width: 420px;
-    right: 0;
-    transform: translateX(-50%);
-    bottom: 350px;
-  }
-  .quote_second .bottom_elements .venenum_blue_flower_stem {
-    max-width: 420px;
-    right: 8px;
-    transform: translateX(-52%);
-    bottom: 322px;
+
+  .quote_second {
+    padding-top: 100px;
   }
   .quote_second .bottom_elements .mirabilis_leaf_top {
     max-width: 900px;
@@ -1274,59 +1280,76 @@ main .container .intro {
   .product_5 {
     padding-bottom: 200px;
   }
+
   .product_5 .animation_container .mirabilis_leaf_b {
     min-width: 600px;
     left: -300px;
   }
+
   .product_5 .animation_container .mirabilis_leaf_c {
     min-width: 350px;
     right: -120px;
   }
+
   .product_5 .mirabilis_open_bud_wrap {
     max-width: 200px;
     bottom: -100px;
   }
+
   .product_5 .mirabilis_bottom_right_2 {
     width: 100px;
   }
+
   .product_5 .mirabilis_leaf_a {
     max-width: 480px;
     left: -300px;
     bottom: -200px;
   }
+
   .product_5 .mirabilis_leaf_ab {
     max-width: 480px;
     right: -250px;
     bottom: -100px;
   }
+
   .product_6_top {
     padding-top: 200px;
   }
+
   .product_6 .product_img {
     padding-bottom: 0;
   }
+
   .product_6 .tenebrae_left {
     min-width: 50px;
     top: 120px;
   }
+
   .product_6 .tenebrae_right {
     min-width: 50px;
     top: 120px;
   }
+
   .product_6 .tenebre_center_wrap {
     width: 280px;
     top: -5%;
   }
+
   .product_6_bottom {
     padding-top: 500px;
   }
-  .product_6_bottom .product_6_bottom_left{
+
+  .product_6_bottom .product_6_bottom_left {
     max-width: 538px;
   }
+
   .product_6_bottom .product_6_bottom_right {
     max-width: 323px;
   }
+
   .product_6_bottom .product_6_bottom_center {
     max-width: 461px;
   }
-} /*end*/
+}
+
+/*end*/

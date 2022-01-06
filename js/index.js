@@ -30,6 +30,7 @@ $(function () {
       $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').removeClass('rotate');
       $('body').removeClass('overflow');
       $('header').removeClass('overflow');
+      $('header').css({height: '60px'});
       count = false;
     } else {
       $('header .gnb_area').css({ visibility: 'visible'});
@@ -37,6 +38,7 @@ $(function () {
       $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').addClass('rotate');
       $('body').addClass('overflow');
       $('header').addClass('overflow');
+      $('header').css({height: '100%'});
       count = true;
     }
   });
@@ -159,8 +161,6 @@ $(function () {
     });
   });
 
-
-
   $('.txtFade').each(function (index, item) {
     gsap.from(item, {
       scrollTrigger: {
@@ -240,14 +240,14 @@ $(function () {
 
   //product_2
   const pro2 = $('.product_2');
-  gsap.from('.product_2 .bottle_img, .product_2 .bottle_bg, .crep_tentacle_base_1, .crep_tentacle_base_2', {
+  gsap.from('.product_2 .bottle_img, .product_2 .bottle_bg, .tentacle_base_1, .tentacle_base_2', {
     scrollTrigger: {
       trigger: pro2,
       start: 'top 50%',
     },
     opacity: 0,
   });
-  gsap.from('.crep_tentacle_1_arm', {
+  gsap.from('.tentacle_1_arm', {
     scrollTrigger: {
       trigger: pro2,
       start: 'top 50%',
@@ -257,7 +257,7 @@ $(function () {
     duratrion: 1,
     delay: 0.5,
   });
-  gsap.from('.crep_tentacle_2_arm', {
+  gsap.from('.tentacle_2_arm', {
     scrollTrigger: {
       trigger: pro2,
       start: 'top 50%',
@@ -275,7 +275,7 @@ $(function () {
     ease: 'linear'
   });
 
-$('.product_2 .crep_tentacle_arm').each(function(index, item) {
+$('.product_2 .tentacle_arm').each(function(index, item) {
   let r = $(this).data('r');
   let d1 =$(this).data('d1');
   gsap.to(item, {    
@@ -336,23 +336,18 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
     repeat: -1,
   });
 
-
-
-
-
-
   //product_3 
   //butterfly
-  gsap.to('.product_3 .arcana_butterfly .butterfly_wing', {
+  gsap.to('.product_3 .butterfly_wrap .butterfly_wing', {
     rotate: 5,
     yoyo: true,
     repeat: -1,
     duration: 1.5,
     ease: 'linear',
   });
-  gsap.from('.product_3 .arcana_butterfly', {
+  gsap.from('.product_3 .butterfly_wrap', {
     scrollTrigger: {
-      trigger: '.arcana_butterfly',
+      trigger: '.butterfly_wrap',
       start: '-50% 50%',
     },
     yPercent: -25,
@@ -381,7 +376,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
     rotate: 110
   });
   const pro4 = $('.product_4');
-  gsap.to('.product_4 .venenum_bg_left', {
+  gsap.to('.product_4 .bottle04_bg_left', {
     scrollTrigger: {
       trigger: pro4,
       start: 'top 60%',
@@ -391,7 +386,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
     xPercent: -45,
     delay: 0.7,
   });
-  gsap.to('.product_4 .venenum_bg_right', {
+  gsap.to('.product_4 .bottle04_bg_right', {
     scrollTrigger: {
       trigger: pro4,
       start: 'top 60%',
@@ -410,7 +405,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.product_5 .mirabilis_leaf_b',
       start: '-40% 50%',
       end: 'bottom bottom',
-      scrub: 1,
+      scrub: 3,
     },
     xPercent: -10,
     rotate: -22,
@@ -421,7 +416,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.product_5 .mirabilis_leaf_c',
       start: '-10% 50%',
       end: '80% bottom',
-      scrub: 1,
+      scrub: 2,
     },
     xPercent: 35,
     rotate: 7.5,
@@ -452,9 +447,9 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
   gsap.from('.product_5 .mirabilis_open_bud_petal_1', {
     scrollTrigger: {
       trigger: '.mirabilis_open_bud',
-      start: 'top 90%',
+      start: 'top 68%',
       end: 'top 90%',
-      scrub: 1,
+      scrub: 3,
     },
     rotate: 36,
     duration: 5,
@@ -464,7 +459,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.mirabilis_open_bud',
       start: 'top 68%',
       end: 'top 90%',
-      scrub: 5,
+      scrub: 3,
     },
     rotate: -36,
     duration: 5,
@@ -474,7 +469,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.mirabilis_open_bud',
       start: 'top 68%',
       end: 'top 90%',
-      scrub: 5,
+      scrub: 3,
     },
     rotate: -2,
     duration: 5,
@@ -484,7 +479,7 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.mirabilis_open_bud',
       start: 'top 70%',
       end: 'top 90%',
-      scrub: 5,
+      scrub: 3,
     },
     rotate: 2,
     duration: 5,
@@ -494,18 +489,20 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
       trigger: '.mirabilis_open_bud',
       start: 'top 70%',
       end: 'top 90%',
-      scrub: 5,
+      scrub: 3,
     },
     yPercent: -4,
   });
+
+  //product_6
   gsap.from('.product_6 .imgSpread', {
     scrollTrigger: {
-      trigger: '.tenebre_center_wrap',
+      trigger: '.pro6_center_wrap',
       start: '-20% 50%',
     },
     scale: 0.1,
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     stagger: {
       each: -0.5
     }
@@ -513,26 +510,26 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
 
   gsap.from('.product_6 .moveLeft', {
     scrollTrigger: {
-      trigger: '.tenebre_center_wrap',
+      trigger: '.pro6_center_wrap',
       start: '-20% 50%',
     },
     xPercent: 0,
     opacity: 0,
-    duration: 1.8,
+    duration: 1,
     stagger: {
-      each: -0.8
+      each: -0.5
     }
   });
   gsap.from('.product_6 .moveRight', {
     scrollTrigger: {
-      trigger: '.tenebre_center_wrap',
+      trigger: '.pro6_center_wrap',
       start: '-20% 50%',
     },
     xPercent: 0,
     opacity: 0,
-    duration: 1.8,
+    duration: 1,
     stagger: {
-      each: -0.8
+      each: -0.5
     }
   });
 
@@ -551,9 +548,6 @@ $('.product_2 .crep_tentacle_arm').each(function(index, item) {
   //stemMove
   gsap.from('.stemMove01', {
     rotate: 10,
-    x: 0,
-    y: 0,
-    z: 0,
     duration: 3,
     repeat: -1,
     yoyo: true,

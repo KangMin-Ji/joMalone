@@ -9,7 +9,9 @@ html{
   margin: -1px;
   clip: rect(0,0,0,0);
 }
-
+img{
+  pointer-events: none;
+}
 .block{
   display: inline-block;
 }

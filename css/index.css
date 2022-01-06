@@ -338,7 +338,7 @@ main .container .intro {
   bottom: 650px;
 }
 
-.product_1 .obscuratio_tentacle {
+.product_1 .octopus_tentacle {
   max-width: 40vw;
   position: absolute;
   right: -50px;
@@ -371,7 +371,7 @@ main .container .intro {
   right: -115px;
 }
 
-.product_2 .crep_tentacle_1 {
+.product_2 .tentacle_1 {
   width: 250px;
   position: absolute;
   bottom: 50px;
@@ -379,29 +379,29 @@ main .container .intro {
   z-index: 1;
 }
 
-.product_2 .crep_tentacle_1 .crep_tentacle_base_1 {
+.product_2 .tentacle_1 .tentacle_base_1 {
   width: 100%;
   position: relative;
 }
 
-.product_2 .crep_tentacle_1 .crep_tentacle_1_arm {
+.product_2 .tentacle_1 .tentacle_1_arm {
   width: 100%;
   position: absolute;
 }
 
-.product_2 .crep_tentacle_2 {
+.product_2 .tentacle_2 {
   width: 350px;
   position: absolute;
   top: 0px;
   left: -200px;
 }
 
-.product_2 .crep_tentacle_2 .crep_tentacle_base_2 {
+.product_2 .tentacle_2 .tentacle_base_2 {
   width: 100%;
   position: relative;
 }
 
-.product_2 .crep_tentacle_2 .crep_tentacle_2_arm {
+.product_2 .tentacle_2 .tentacle_2_arm {
   width: 100%;
   position: absolute;
 }
@@ -499,7 +499,7 @@ main .container .intro {
 }
 
 .product_3 {
-  background-image: url(../images/arcana_bottom.png);
+  background-image: url(../images/blackberry_bg.png);
   background-repeat: no-repeat;
   background-color: #211611;
   background-size: cover;
@@ -510,7 +510,7 @@ main .container .intro {
   padding: 150px 0 450px;
 }
 
-.product_3 .arcana_butterfly {
+.product_3 .butterfly_wrap {
   width: 250px;
   position: absolute;
   top: 50%;
@@ -519,30 +519,16 @@ main .container .intro {
   z-index: 9;
 }
 
-.product_3 .arcana_butterfly .butterfly_bg {
+.product_3 .butterfly_wrap .butterfly_bg {
   width: 100%;
 }
 
-.product_3 .arcana_butterfly .butterfly_wing {
+.product_3 .butterfly_wrap .butterfly_wing {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   transform-origin: 170px 257px;
-}
-
-.product_3 .butterfly_bottom {
-  display: none;
-  position: absolute;
-  right: -40px;
-  max-width: 100%;
-}
-
-.product_3 .arcana_bottom {
-  width: 100%;
-  position: absolute;
-  bottom: 200px;
-  right: 0;
 }
 
 .product_3 .lily_wrap {
@@ -600,7 +586,7 @@ main .container .intro {
   position: relative;
 }
 
-.product_4 .product_top .venenum_bg_left {
+.product_4 .product_top .bottle04_bg_left {
   width: 280px;
   position: absolute;
   left: -50px;
@@ -610,7 +596,7 @@ main .container .intro {
   opacity: 0;
 }
 
-.product_4 .product_top .venenum_bg_right {
+.product_4 .product_top .bottle04_bg_right {
   width: 280px;
   position: absolute;
   right: -50px;
@@ -619,12 +605,7 @@ main .container .intro {
   margin: 0 auto;
   opacity: 0;
 }
-
-.product_4 .venenum_flower {
-  display: none;
-}
-
-.product_4 .venenum_blue_flower {
+.product_4 .blue_flower_2 {
   max-width: 36vw;
   position: absolute;
   right: -20vw;
@@ -751,7 +732,7 @@ main .container .intro {
   padding-bottom: 100px;
 }
 
-.product_6_top .tenebre_top_new {
+.product_6_top .pro6_top_new {
   max-width: 95%;
   bottom: 0;
   position: relative;
@@ -773,35 +754,35 @@ main .container .intro {
   padding-bottom: 100px;
 }
 
-.product_6 .tenebrae_left {
+.product_6 .pro6_left {
   max-width: 13vw;
   position: absolute;
   top: 80px;
   left: 0;
 }
 
-.product_6 .tenebrae_left img {
+.product_6 .pro6_left img {
   width: 100%;
 }
 
-.product_6 .tenebrae_left .tenebre_left_img {
+.product_6 .pro6_left .pro6_left_img {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.product_6 .tenebrae_right {
+.product_6 .pro6_right {
   max-width: 13vw;
   position: absolute;
   top: 80px;
   right: 0;
 }
 
-.product_6 .tenebrae_right img {
+.product_6 .pro6_right img {
   max-width: 100%;
 }
 
-.product_6 .tenebrae_right .tenebrae_right_img {
+.product_6 .pro6_right .pro6_right_img {
   position: absolute;
   top: 0;
   right: 0;
@@ -811,7 +792,7 @@ main .container .intro {
   position: relative;
 }
 
-.product_6 .tenebre_center_wrap {
+.product_6 .pro6_center_wrap {
   width: 650px;
   position: absolute;
   left: 50%;
@@ -819,11 +800,11 @@ main .container .intro {
   top: -15%;
 }
 
-.product_6 .tenebre_center_wrap .tenebre_center_pos {
+.product_6 .pro6_center_wrap .pro6_center_pos {
   width: 100%;
 }
 
-.product_6 .tenebre_center_wrap .tenebre_center {
+.product_6 .pro6_center_wrap .pro6_center {
   width: 100%;
   position: absolute;
   top: 0;
@@ -953,11 +934,11 @@ main .container .intro {
     right: -11vw;
   }
 
-  .product_2 .crep_tentacle_1 {
+  .product_2 .tentacle_1 {
     width: 24.4vw;
   }
 
-  .product_2 .crep_tentacle_2 {
+  .product_2 .tentacle_2 {
     width: 34.1vw;
   }
 
@@ -998,11 +979,11 @@ main .container .intro {
     padding: 14.6vw 0 38vw;
   }
 
-  .product_3 .arcana_butterfly {
+  .product_3 .butterfly_wrap {
     width: 24.4vw;
   }
 
-  .product_3 .arcana_butterfly .butterfly_wing {
+  .product_3 .butterfly_wrap .butterfly_wing {
     transform-origin: 16.6vw 25vw;
   }
 
@@ -1047,13 +1028,13 @@ main .container .intro {
     width: 72vw;
   }
 
-  .product_4 .product_top .venenum_bg_left {
+  .product_4 .product_top .bottle04_bg_left {
     width: 27.3vw;
     left: -4.8vw;
     bottom: 9.7vw;
   }
 
-  .product_4 .product_top .venenum_bg_right {
+  .product_4 .product_top .bottle04_bg_right {
     width: 27.3vw;
     right: -4.8vw;
     bottom: 7.8vw;
@@ -1105,7 +1086,7 @@ main .container .intro {
     padding-bottom: 9.7vw;
   }
 
-  .product_6 .tenebre_center_wrap {
+  .product_6 .pro6_center_wrap {
     width: 63.47vw;
   }
   .quote.quote_third{
@@ -1114,11 +1095,7 @@ main .container .intro {
   .quote.quote_third .txt_wrap strong{
     padding: 4.8vw 140px 0 0;
   }
-  /* .quote_third {
-    padding: 19.5vw;
-  } */
 }
-
 /*end*/
 
 @media screen and (max-width: 768px) {
@@ -1170,7 +1147,7 @@ main .container .intro {
     width: 250px;
   }
 
-  .product_1 .obscuratio_tentacle {
+  .product_1 .octopus_tentacle {
     display: none;
   }
 
@@ -1190,13 +1167,13 @@ main .container .intro {
     right: -55px;
   }
 
-  .product_2 .crep_tentacle_1 {
+  .product_2 .tentacle_1 {
     width: 118px;
     left: -70px;
     bottom: 16px;
   }
 
-  .product_2 .crep_tentacle_2 {
+  .product_2 .tentacle_2 {
     width: 220px;
     left: -104px;
     top: 10px;
@@ -1227,12 +1204,12 @@ main .container .intro {
     max-width: 445px;
   }
 
-  .product_3 .arcana_butterfly {
+  .product_3 .butterfly_wrap {
     width: 125px;
     /* left: 100px; */
   }
 
-  .product_3 .arcana_butterfly .butterfly_wing {
+  .product_3 .butterfly_wrap .butterfly_wing {
     transform-origin: 4.8px 8px;
     transform-origin: 123px 103px;
   }
@@ -1250,19 +1227,19 @@ main .container .intro {
     left: 50%;
   }
 
-  .product_4 .product_top .venenum_bg_left {
+  .product_4 .product_top .bottle04_bg_left {
     width: 150px;
     left: -20px;
     bottom: 35px;
   }
 
-  .product_4 .product_top .venenum_bg_right {
+  .product_4 .product_top .bottle04_bg_right {
     width: 150px;
     right: -20px;
     bottom: 32px;
   }
 
-  .product_4 .venenum_blue_flower {
+  .product_4 .blue_flower_2 {
     display: none;
   }
 
@@ -1320,17 +1297,17 @@ main .container .intro {
     padding-bottom: 0;
   }
 
-  .product_6 .tenebrae_left {
+  .product_6 .pro6_left {
     min-width: 50px;
     top: 120px;
   }
 
-  .product_6 .tenebrae_right {
+  .product_6 .pro6_right {
     min-width: 50px;
     top: 120px;
   }
 
-  .product_6 .tenebre_center_wrap {
+  .product_6 .pro6_center_wrap {
     width: 280px;
     top: -5%;
   }

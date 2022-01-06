@@ -159,13 +159,13 @@ header .gnb_wrap .gnb .menu_open{
   height: 20px;
   float: right;
   padding: 10px;
-  background: url(../images/menu_open.svg) no-repeat;
+  background: url(../images/menu_open.png) no-repeat;
   background-size: cover;
   margin: 14px;
   cursor: pointer;
 }
 header .gnb_wrap .gnb .menu_open.on{
-  background: url(../images/menu_close.svg) no-repeat;
+  background: url(../images/menu_close.png) no-repeat;
   background-size: cover;
 }
 header .gnb_wrap .gnb .in_gnb{

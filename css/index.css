@@ -9,19 +9,16 @@
 }
 
 .bannerSwiper .swiper-wrapper .banner-slide {
-  height: 100%;
   padding: 8px 44px;
   text-align: center;
 }
 
 .bannerSwiper .swiper-wrapper .banner-slide a {
-  display: block;
-  height: 100%;
   font-size: var(--font_banner);
   line-height: 1.4;
 }
 
-.bannerSwiper .swiper_controls {
+.banner_notice .swiper_controls {
   width: 98%;
   position: absolute;
   top: 50%;
@@ -30,20 +27,22 @@
   display: flex;
   justify-content: space-between;
   z-index: 1;
-  cursor: pointer;
+  pointer-events: none;
 }
 
-.bannerSwiper .swiper_controls>div {
+.banner_notice .swiper_controls>div {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  pointer-events: fill;
 }
 
-.bannerSwiper .banner-button-prev {
+.banner_notice .banner-button-prev {
   background: url(../images/left_arrow.png) no-repeat;
   background-size: cover;
 }
 
-.bannerSwiper .banner-button-next {
+.banner_notice .banner-button-next {
   background: url(../images/right_arrow.png) no-repeat;
   background-size: cover;
 }

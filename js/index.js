@@ -191,7 +191,7 @@ $(function () {
     rotate: -16,
     repeat: -1,
     duration: 5,
-    ease: "linear",
+    ease: 'linear',
     yoyo: true,
   });
 
@@ -362,7 +362,7 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
   //snake_rotate
   gsap.from('.product_4 .snake_1', {
     scrollTrigger: {
-      trigger: '.product_4 .snake_1',
+      trigger: '.product_4',
       start: '-10% 50%',
       end: 'bottom 80%',
       scrub: 1,
@@ -372,7 +372,7 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
   });
   gsap.from('.product_4 .snake_2', {
     scrollTrigger: {
-      trigger: '.product_4 .snake_2',
+      trigger: '.product_4',
       start: '-10% 50%',
       end: '80% 50%',
       scrub: 1,
@@ -406,9 +406,9 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
 
   gsap.to('.product_5 .mirabilis_leaf_b', {
     scrollTrigger: {
-      trigger: '.product_5 .mirabilis_leaf_b',
-      start: '-40% 50%',
-      end: 'bottom bottom',
+      trigger: pro5,
+      start: '-30% 70%',
+      end: '-20% 50%',
       scrub: 3,
     },
     xPercent: -10,
@@ -417,10 +417,12 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
   });
   gsap.to('.product_5 .mirabilis_leaf_c', {
     scrollTrigger: {
-      trigger: '.product_5 .mirabilis_leaf_c',
-      start: '-10% 50%',
-      end: '80% bottom',
-      scrub: 2,
+      trigger: pro5,
+      // start: '-10% 50%',
+      // end: '80% bottom',
+      start: '-30% 70%',
+      end: '-20% 50%',
+      scrub: 3,
     },
     xPercent: 35,
     rotate: 7.5,

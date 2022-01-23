@@ -25,23 +25,31 @@ $(function () {
   $('.ham_btn').click(function (e) {
     e.preventDefault();
     if (count === true) {
-      $('header .gnb_area').css({visibility: 'hidden'});
+      $('header .gnb_area').css({
+        visibility: 'hidden'
+      });
       $('.header_inner .ham_btn .line_second').removeClass('on');
       $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').removeClass('rotate');
       $('body').removeClass('overflow');
       $('header').removeClass('overflow');
-      $('header').css({height: '60px'});
+      $('header').css({
+        height: '60px'
+      });
       $('.in_gnb').animate({
         height: 0
       });
       count = false;
     } else {
-      $('header .gnb_area').css({ visibility: 'visible'});
+      $('header .gnb_area').css({
+        visibility: 'visible'
+      });
       $('.header_inner .ham_btn .line_second').addClass('on');
       $('.header_inner .ham_btn .line_first, .header_inner .ham_btn .line_third').addClass('rotate');
       $('body').addClass('overflow');
       $('header').addClass('overflow');
-      $('header').css({height: '100%'});      
+      $('header').css({
+        height: '100%'
+      });
       $('.menu_open').removeClass('on');
       count = true;
     }
@@ -100,6 +108,14 @@ $(function () {
     }
   });
 
+  gsap.to('.intro .scroll', {
+    scrollTrigger: {
+      trigger: '.intro .scroll',
+      start: 'top 90%',
+    },
+    opacity: 0,
+  });
+
   gsap.from('.yellow_flower_stem_wrap', {
     rotate: 20,
     duration: 1.5,
@@ -110,12 +126,12 @@ $(function () {
     scale: (2),
   });
   gsap.from('.vine_flower', {
-    x: 50,
+    xPercent: 50,
     duration: 1.5,
     scale: (1.5),
   });
   gsap.from('.blue_flower', {
-    x: 50,
+    xPercent: 50,
     rotate: 10,
     duration: 1.5,
     scale: (1.5),
@@ -125,31 +141,32 @@ $(function () {
     scale: (1.2),
   });
 
-
   txtMotion = gsap.timeline({});
   txtMotion.from('.intro .intro_logo', {
-    opacity: 0,
-    duration: 1,
-    delay: 1,
-    yPercent: 20,
-  });
-  txtMotion.from('.intro .intro_title p', {
-    opacity: 0,
-    duration: 0.8,
-    yPercent: 20,
-  });
-  txtMotion.from('.intro .intro_title h2', {
-    opacity: 0,
-    duration: 0.8,
-    yPercent: 20,
-  });
-  txtMotion.from('.intro_bottom .txt_wrap p', {
-    opacity: 0,
-  });
-  txtMotion.from('.intro .scroll', {
-    opacity: 0,
-    duration: 1,
-  });
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      yPercent: 20,
+    })
+    .from('.intro .intro_title p', {
+      opacity: 0,
+      duration: 0.8,
+      yPercent: 20,
+    })
+    .from('.intro .intro_title h2', {
+      opacity: 0,
+      duration: 0.8,
+      yPercent: 20,
+    })
+    .from('.intro_bottom .txt_wrap p', {
+      opacity: 0,
+    })
+    .from('.intro .scroll', {
+      opacity: 0,
+      duration: 1,
+    });
+
+
 
   //product_img 
   $('.productFade').each(function (index, item) {
@@ -191,104 +208,80 @@ $(function () {
     rotate: -16,
     repeat: -1,
     duration: 5,
-    ease: 'linear',
+    ease: "linear",
     yoyo: true,
   });
 
 
   // product_1
-  const pro1 = $('.product_1');
-  gsap.from('.product_1 .bottle_bg', {
+  pro1 = gsap.timeline({
     scrollTrigger: {
-      trigger: pro1,
+      trigger: $('.product_1'),
       start: 'top 50%',
-    },
-    opacity: 0,
-    yPercent: 30,
-    scale: (0.4),
-    duration: 2,
-    delay: 0.5,
+    }
   });
-  gsap.to('.product_1 .red_flower_large', {
-    scrollTrigger: {
-      trigger: pro1,
-      start: 'top 50%',
-    },
-    opacity: 1,
-    yPercent: -10,
-    duration: 2,
-    delay: 0.5,
-  });
-  gsap.to('.product_1 .red_flower_large_petal_right', {
-    scrollTrigger: {
-      trigger: pro1,
-      start: 'top 50%',
-    },
-    opacity: 1,
-    yPercent: -10,
-    duration: 2,
-    rotate: 15,
-    delay: 0.5,
-  });
-  gsap.to('.product_1 .red_flower_large_petal_left', {
-    scrollTrigger: {
-      trigger: pro1,
-      start: 'top 50%',
-    },
-    opacity: 1,
-    yPercent: -10,
-    duration: 2,
-    rotate: -15,
-    delay: 0.5,
-  });
+  pro1.from('.product_1 .bottle_bg', {
+      opacity: 0,
+      yPercent: 30,
+      scale: (0.4),
+      duration: 2,
+    }, 'product_1')
+    .to('.product_1 .red_flower_large', {
+      opacity: 1,
+      yPercent: -10,
+      duration: 2,
+    }, 'product_1')
+    .to('.product_1 .red_flower_large_petal_right', {
+      opacity: 1,
+      yPercent: -10,
+      duration: 2,
+      rotate: 15,
+    }, 'product_1')
+    .to('.product_1 .red_flower_large_petal_left', {
+      opacity: 1,
+      yPercent: -10,
+      duration: 2,
+      rotate: -15,
+    }, 'product_1');
 
   //product_2
-  const pro2 = $('.product_2');
-  gsap.from('.product_2 .bottle_img, .product_2 .bottle_bg, .tentacle_base_1, .tentacle_base_2', {
+  pro2 = gsap.timeline({
     scrollTrigger: {
-      trigger: pro2,
+      trigger: $('.product_2'),
       start: 'top 50%',
-    },
-    opacity: 0,
+    }
   });
-  gsap.from('.tentacle_1_arm', {
-    scrollTrigger: {
-      trigger: pro2,
-      start: 'top 50%',
-    },
-    opacity: 0,
-    yPercent: 30,
-    duratrion: 1,
-    delay: 0.5,
-  });
-  gsap.from('.tentacle_2_arm', {
-    scrollTrigger: {
-      trigger: pro2,
-      start: 'top 50%',
-    },
-    opacity: 0,
-    yPercent: 50,
-    duratrion: 1,
-    delay: 0.3,
-  });
+  pro2.from('.product_2 .bottle_img, .product_2 .bottle_bg, .tentacle_base_1, .tentacle_base_2', {
+      opacity: 0,
+    })
+    .from('.tentacle_1_arm', {
+      opacity: 0,
+      yPercent: 30,
+      duratrion: 1,
+    }, 'product_2')
+    .from('.tentacle_2_arm', {
+      opacity: 0,
+      yPercent: 50,
+      duratrion: 1,
+    }, 'product_2');
   gsap.to('.product_2 .octopus_left', {
     rotate: 10,
     repeat: -1,
     yoyo: true,
     duration: 1.5,
-    ease: 'linear'
+    ease: "linear"
   });
 
-$('.product_2 .tentacle_arm').each(function(index, item) {
-  let r = $(this).data('r');
-  let d1 =$(this).data('d1');
-  gsap.to(item, {    
-    rotate: r,
-    repeat: -1,
-    yoyo: true,
-    duration: d1,
+  $('.product_2 .tentacle_arm').each(function (index, item) {
+    let r = $(this).data('r');
+    let d1 = $(this).data('d1');
+    gsap.to(item, {
+      rotate: r,
+      repeat: -1,
+      yoyo: true,
+      duration: d1,
+    });
   });
-});
 
   //break
   const breakArea = $('.break');
@@ -326,7 +319,7 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
     yPercent: -5,
     repeat: -1,
     duration: 2,
-    ease: 'linear',
+    ease: "linear",
     yoyo: true,
   });
 
@@ -335,7 +328,7 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
   gsap.from('.quote_first .red_flower_small_main', {
     rotate: -3,
     yoyo: true,
-    ease: 'linear',
+    ease: "linear",
     duration: 2.5,
     repeat: -1,
   });
@@ -347,7 +340,7 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
     yoyo: true,
     repeat: -1,
     duration: 1.5,
-    ease: 'linear',
+    ease: "linear",
   });
   gsap.from('.product_3 .butterfly_wrap', {
     scrollTrigger: {
@@ -379,184 +372,137 @@ $('.product_2 .tentacle_arm').each(function(index, item) {
     },
     rotate: 110
   });
-  const pro4 = $('.product_4');
-  gsap.to('.product_4 .bottle04_bg_left', {
+
+  pro4 = gsap.timeline({
     scrollTrigger: {
-      trigger: pro4,
+      trigger: $('.product_4'),
       start: 'top 60%',
     },
-    opacity: 1,
-    duration: 2,
-    xPercent: -45,
-    delay: 0.7,
   });
-  gsap.to('.product_4 .bottle04_bg_right', {
-    scrollTrigger: {
-      trigger: pro4,
-      start: 'top 60%',
-    },
-    opacity: 1,
-    duration: 2,
-    xPercent: 45,
-    delay: 1.5,
-  });
+  pro4.to('.product_4 .bottle04_bg_left', {
+      opacity: 1,
+      duration: 2,
+      xPercent: -45,
+    }, 'product_4+=0.7')
+    .to('.product_4 .bottle04_bg_right', {
+      opacity: 1,
+      duration: 2,
+      xPercent: 45,
+    }, 'product_4+=1.5');
 
   //product_5 
-  const pro5 = $('.product_5');
-
-  gsap.to('.product_5 .mirabilis_leaf_b', {
+  pro5 = gsap.timeline({
     scrollTrigger: {
-      trigger: pro5,
+      trigger: $('.product_5'),
       start: '-30% 70%',
       end: '-20% 50%',
       scrub: 3,
     },
-    xPercent: -10,
-    rotate: -22,
-    duration: 3,
   });
-  gsap.to('.product_5 .mirabilis_leaf_c', {
-    scrollTrigger: {
-      trigger: pro5,
-      // start: '-10% 50%',
-      // end: '80% bottom',
-      start: '-30% 70%',
-      end: '-20% 50%',
-      scrub: 3,
-    },
-    xPercent: 35,
-    rotate: 7.5,
-    duration: 3,
-  });
+  pro5.to('.product_5 .mirabilis_leaf_b', {
+      xPercent: -10,
+      rotate: -22,
+      duration: 3,
+    }, 'product_5')
+    .to('.product_5 .mirabilis_leaf_c', {
+      xPercent: 35,
+      rotate: 7.5,
+      duration: 3,
+    }, 'product_5');
 
   gsap.to('.product_5 .mirabilis_bottom_right_2', {
     rotate: 3,
     duration: 3,
     repeat: -1,
     yoyo: true,
-    ease: 'linear',
+    ease: "linear",
   });
   gsap.to('.product_5 .mirabilis_leaf_a', {
     rotate: 5,
     duration: 2,
     repeat: -1,
     yoyo: true,
-    ease: 'linear',
+    ease: "linear",
   });
   gsap.to('.product_5 .mirabilis_leaf_ab', {
     rotate: -40,
     duration: 2,
     repeat: -1,
     yoyo: true,
-    ease: 'linear',
+    ease: "linear",
   });
-  gsap.from('.product_5 .mirabilis_open_bud_petal_1', {
+
+  mirabilis = gsap.timeline({
     scrollTrigger: {
       trigger: '.mirabilis_open_bud',
       start: 'top 68%',
       end: 'top 90%',
       scrub: 3,
     },
-    rotate: 36,
-    duration: 5,
   });
-  gsap.from('.product_5 .mirabilis_open_bud_petal_3', {
-    scrollTrigger: {
-      trigger: '.mirabilis_open_bud',
-      start: 'top 68%',
-      end: 'top 90%',
-      scrub: 3,
-    },
-    rotate: -36,
-    duration: 5,
-  });
-  gsap.to('.product_5 .mirabilis_open_bud_petal_2', {
-    scrollTrigger: {
-      trigger: '.mirabilis_open_bud',
-      start: 'top 68%',
-      end: 'top 90%',
-      scrub: 3,
-    },
-    rotate: -2,
-    duration: 5,
-  });
-  gsap.to('.product_5 .mirabilis_open_bud_petal_4', {
-    scrollTrigger: {
-      trigger: '.mirabilis_open_bud',
-      start: 'top 70%',
-      end: 'top 90%',
-      scrub: 3,
-    },
-    rotate: 2,
-    duration: 5,
-  });
-  gsap.to('.product_5 .mirabilis_open_bud_main', {
-    scrollTrigger: {
-      trigger: '.mirabilis_open_bud',
-      start: 'top 70%',
-      end: 'top 90%',
-      scrub: 3,
-    },
-    yPercent: -4,
-  });
+  mirabilis.from('.product_5 .mirabilis_open_bud_petal_1', {
+      rotate: 36,
+      duration: 5,
+    }, 'mirabilis')
+    .from('.product_5 .mirabilis_open_bud_petal_3', {
+
+      rotate: -36,
+      duration: 5,
+    }, 'mirabilis')
+    .to('.product_5 .mirabilis_open_bud_petal_2', {
+
+      rotate: -2,
+      duration: 5,
+    }, 'mirabilis')
+    .to('.product_5 .mirabilis_open_bud_petal_4', {
+
+      rotate: 2,
+      duration: 5,
+    }, 'mirabilis')
+    .to('.product_5 .mirabilis_open_bud_main', {
+
+      yPercent: -4,
+      duration: 5,
+    }, 'mirabilis');
 
   //product_6
-  gsap.from('.product_6 .imgSpread', {
+  pro6 = gsap.timeline({
     scrollTrigger: {
       trigger: '.pro6_center_wrap',
       start: '-20% 50%',
     },
-    scale: 0.1,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      each: -0.5
-    }
   });
+  pro6.from('.product_6 .imgSpread', {
+      scale: 0.1,
+      opacity: 0,
+      duration: 1,
+      stagger: {
+        each: -0.5
+      }
+    }, 'product_6')
+    .from('.product_6 .moveLeft', {
+      xPercent: 0,
+      opacity: 0,
+      duration: 1,
+      stagger: {
+        each: -0.5
+      }
+    }, 'product_6')
+    .from('.product_6 .moveRight', {
+      xPercent: 0,
+      opacity: 0,
+      duration: 1,
+      stagger: {
+        each: -0.5
+      }
+    }, 'product_6');
 
-  gsap.from('.product_6 .moveLeft', {
-    scrollTrigger: {
-      trigger: '.pro6_center_wrap',
-      start: '-20% 50%',
-    },
-    xPercent: 0,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      each: -0.5
-    }
-  });
-  gsap.from('.product_6 .moveRight', {
-    scrollTrigger: {
-      trigger: '.pro6_center_wrap',
-      start: '-20% 50%',
-    },
-    xPercent: 0,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      each: -0.5
-    }
-  });
-
-
-
-  scrollMotion = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.intro .scroll',
-      start: 'top 90%',
-    }
-  });
-
-  scrollMotion.to('.intro .scroll', {
-    opacity: 0,
-  })
   //stemMove
   gsap.from('.stemMove01', {
     rotate: 10,
     duration: 3,
     repeat: -1,
     yoyo: true,
-    ease: 'linear',
+    ease: "linear",
   });
 }); //end
